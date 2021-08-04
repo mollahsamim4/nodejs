@@ -107,7 +107,7 @@ io.on("connection",socket=>{
 
 })
 
-let port=process.env.port || 3000;
+let port=process.env.port || 5000;
 expressServer.listen(port,e=>{
     console.log(`Server running @ ${port}`);
 })
