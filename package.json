@@ -10,8 +10,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "node server",
-    "dev":"nodemon server"
+    "start":"nodemon server"
   },
   "keywords": [],
   "author": "",
