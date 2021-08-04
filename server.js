@@ -8,7 +8,7 @@ const expressServer=http.createServer(app);
 
 let path=require("path");
 
-app.use(express.static(path.join(__dirname,"client")))
+app.use(express.static(path.join(__dirname,"/client")))
 
 
 const {userJoin,getCurrentUser,totalUser,showAlluser, findIndex,
