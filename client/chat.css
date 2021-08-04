@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Tourney:wght@200&display=swap");
+
+:root {
+  --roboto: "Roboto Slab", serif;
+  --dancing: "Dancing Script", cursive;
+  --clock: "Tourney", cursive;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--roboto);
+  width:100vw;
+  overflow-x: hidden;
+}
+
+
+.color-red-500{
+  color: #FC575E;
+}
+.bg-red-500{
+  background: #FC575E;
+}
+
+
+.chatSidebar {
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.bold-sm {
+  font-weight: 400;
+}
+.bold-md {
+  font-weight: 600;
+}
+.bold-lg {
+  font-weight: 900;
+}
+
+/* dahsboard */
+
+.dashboard {
+  background-color: #90d5ec;
+  background-image: linear-gradient(315deg, #90d5ec 0%, #fc575e 74%);
+}
+
+.chatHistory {
+  height: 70vh;
+  box-shadow: inset 6px 6px 10px 0 rgb(0 0 0 / 20%),
+    inset -6px -6px 10px 0 rgb(255 255 255 / 50%);
+  border-radius: 10px;
+  padding: 13px;
+  overflow:auto;
+  width: 100%;
+}
+
+.chatForm input{
+    border-radius: 4px 0 0 4px;
+}
+.chatForm button{
+    border-radius: 0 4px  4px 0;
+}
+
+/* float left */
+.float-left{
+    float: left;
+    clear: both;
+}
+.float-right{
+    float: right;
+    clear: both;
+}
+
+.chatTextWrapper{
+  margin-bottom: 1rem;
+
+  padding: .5rem;
+  border-radius: 6px;
+  color: white;
+  font-family: var(--roboto);
+}
+
+/* chat section container */
+
+#chat_section_container{
+  display: flex;
+  
+}
+
+/* chat sidebar animation to hide and show */
+
+@media(max-width:700px){
+  #chatSidebar{
+     width:0%;
+     transform: translateX(-100%);
+     opacity: 0;
+     
+   }
+ 
+   #chatHistoryWrapper{
+     width:100%;
+     
+    
+   }
+ }
+ 
+
+
+#chat_section_container #chatSidebar{
+  position: relative;
+  width:20%;
+  transition: all 1s;
+  
+}
+
+
+#chat_section_container #chatHistoryWrapper{
+  width:  80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  transition: all 1s;
+}
+
+

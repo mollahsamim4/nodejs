@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E chat Application From Basic Knowledge</title>
+
+    <!-- bootstap 5 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css" integrity="sha512-usVBAd66/NpVNfBge19gws2j6JZinnca12rAe2l+d+QkLU9fiG02O1X8Q6hepIpr/EYKZvKx/I9WsnujJuOmBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- fontawesome -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- custom css -->
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    
+    <div class="row text-center pt-2">
+        <h1 class="roboto chatHeading">Welcome to EChat</h1>
+    </div>
+
+        <!-- entered chat room -->
+
+          <div class="row mt-4" id="enter_chat_form_wrapper">
+              <div class="col-sm-4 offset-sm-4">
+                    <form action="./chat.html" method="GET" class="bg-success bg-gradient p-3 rounded-2 shadow-lg" id="joinChat"> 
+
+                        <!-- username -->
+                        <div class="form-group">
+                            <label for="username" class="form-check-label mb-2">Username:</label>
+                            <input type="text" name="username" id="username" placeholder="Username" class="form-control form-control-lg">
+                            <div class="usernameErr error"></div>
+                        </div>
+
+                        <!-- select room -->
+                        <div class="form-group">
+                            <label for="roomname" class="form-check-label mb-2">Select Room:</label>
+                           <select name="roomname" id="roomname" class="form-select form-select-lg">
+                               <option value="" selected> Select One</option>
+                               <option value="english">English</option>
+                               <option value="Bengali">Bengali</option>
+                               <option value="Hindi">Hindi</option>
+                           </select>
+                           <div class="roomnameErr error"></div>
+                        </div>
+                            
+                        <!-- submit Button -->
+
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary offset-sm-4">Join Chat</button>
+                        </div>
+
+                    </form>
+              </div>
+          </div>
+
+
+
+
+
+    <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to EChat</title>
+       <!-- bootstap 5 -->
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css" integrity="sha512-usVBAd66/NpVNfBge19gws2j6JZinnca12rAe2l+d+QkLU9fiG02O1X8Q6hepIpr/EYKZvKx/I9WsnujJuOmBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+       <!-- fontawesome -->
+   
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+       <!-- custom css -->
+   
+       <link rel="stylesheet" href="./chat.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <ul class="nav m-2">
+            <li class="nav-item ">
+                <button class="btn btn-secondary ml-2" id="show_chat_sidebar"><i class="fas fa-bars    "></i></button>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="position-relative" id="chat_section_container">
+        <div class="chatSidebar" id="chatSidebar">
+            <div class="chatSidebar bg-success bg-success">
+                <div class="chatSIdebarHeading text-center text-light bold-lg  h2 p-4 d-flex justify-content-center align-items-center dashboard gap-2 rounded-3 shadow">EChat <span class="badge bg-white text-success rounded-circle " id="totalUser" title="Total Connected Users" >5</span> </div>
+                <div class="chatRoomName mt-4  pb-4 ">
+                   
+                    <div class="text-center bold-lg text-info pb-2 ">
+                        <h4 class="bg-white
+                         d-inline py-1 px-3 rounded shadow"> Room Name</h4>
+                    </div>
+                    <div class="text-center bold-lg text-warning h4 " id="showRoomName"></div>
+                </div>
+                <div class="showChatUser mt-4">
+                    <div class="text-center bold-lg text-info h3 mb-3 ">
+                        <h3 class="bg-white
+                         d-inline py-1 px-3 rounded shadow ">User List</h3>
+                    </div>
+                    <ul class="ChatUser navbar-nav d-flex justify-content-center align-items-center text-white roboto h3">
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="chatHistoryWrapper p-4" id="chatHistoryWrapper">
+            <div class="chatHistory">
+                <!-- user name and user chat time -->
+        
+                 
+            </div>
+            <div class="chatForm mt-4 col-12 col-sm-6 offset-sm-3">
+                <form action="" id="chatTextForm" method="POST" class="d-flex justify-content-center">
+                    <input type="text" name="chatText" id="chatText" class="form-control form-control-lg border-primary border-2">
+                    <button type="submit" class="btn btn-primary d-flex justify-content-center align-items-center gap-1 btn-lg">Send <i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+    <script src="/socket.io/socket.io.js"></script>
+
+    <script src="./chat.js"></script>
+</body>
+</html>
